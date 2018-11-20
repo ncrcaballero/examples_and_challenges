@@ -1,0 +1,14 @@
+QString login::GetVmId(){
+    QFile txt("/etc/localeinfo.txt");
+    QString iptxt;
+    if (!txt.open(QIODevice::ReadOnly)){
+         qDebug() << "Error reading VmId localeinfotxt file";
+         iptxt = "error";
+         return iptxt;
+    }
+    QTextStream in(&txt);
+    iptxt = in.readAll();
+    qDebug() << iptxt;
+    txt.close();
+    return iptxt;
+}
