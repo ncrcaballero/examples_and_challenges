@@ -30,6 +30,7 @@ int main()
     printf("\n");
     
     printf("bubble sort ascending\n");
+    //not sure if i<40-1 or just i<40
     for(int i=0; i<40-1 ; i++){
         for(int j=0; j<40-i-1 ; j++){
             if(userInput[j]> userInput[j+1]){
